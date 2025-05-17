@@ -1,455 +1,112 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <link rel="shortcut icon" type="x-icon" href="netflix-logo.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Netflix India – Watch TV Shows Online, Watch Movies Online</title>
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-   <link rel="icon" type="image/x-icon" href="https://image.similarpng.com/very-thumbnail/2021/01/Netflix-logo-on-transparent-background-PNG.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix India – Watch TV Shows Online, Watch Movies Online</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<!-- <link rel="stylesheet" href="netflix.css"> -->
-
-<style>
-  * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    /* font-family: cursive; */
-  }
-
-  body {
-    background-color: rgb(128, 130, 138);
-    /* background-image: url('Netflix-backpic.jpeg'); */
-  }
-
-  .header {
-    width: 100%;
-    height: 55px;
-    background-color: rgb(0, 0, 0);
-    padding-left: 5%;
-    padding-right: 5%;
-    display: flex;
-  }
-
-  .logo {
-    width: 10%;
-    height: 55px;
-    /* background-color: rgb(255, 255, 0); */
-    display: flex;
-    justify-content: space-between;
-    /* align-items: center; */
-  }
-
-  .logo img {
-    width: 100%;
-    height: 100%;
-  }
-
-  .search {
-    width: 15%;
-    height: 55px;
-    /* background-color: rgb(0, 31, 234); */
-    display: flex;
-    margin-left: auto;
-    justify-content: center;
-    align-items: center;
-    border: none;
-  }
-
-  .searchbar {
-    width: 20%;
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    border: none;
-    /* border-radius: 5px; */
-  }
-
-  .search-box {
-    width: 80%;
-    height: 35px;
-    font-size: 18px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    outline: none;
-    /* border-radius: 5px; */
-  }
-
-  .search-box:hover {
-    /* border: 2px solid red; */
-    background-color: rgb(207, 245, 232);
-
-  }
-
-  .searchbar {
-    justify-content: center;
-    align-items: center;
-    font-size: 25px;
-    color: rgb(0, 0, 0);
-    width: 20%;
-    height: 35px;
-    border: none;
-    outline: none;
-
-  }
-
-  .one h1 {
-    width: auto;
-    text-align: center;
-    font-size: 53px;
-    display: flex;
-    justify-content: center;
-    margin-top: 250px;
-    color: rgb(255, 255, 255);
-  }
-
-  .one h1 .otherh1 {
-    font-size: 20px;
-
-  }
-
-  .one h2 {
-    /* border: 3px solid red; */
-    padding-top: 10px;
-    justify-content: center;
-    display: flex;
-    font-size: 30px;
-    color: rgb(255, 255, 255);
-  }
-
-  .one h3 {
-    /* border: 3px solid rgb(234, 255, 0); */
-    font-size: 25px;
-    display: flex;
-    justify-content: center;
-    padding-top: 10px;
-    font-family: cursive;
-    color: rgb(255, 255, 255);
-  }
-
-  .Email-id {
-    width: 80%;
-    height: 35px;
-    font-size: 18px;
-    text-align: center;
-    display: inline;
-    justify-content: center;
-  }
-
-  .Email-id:hover {
-    border-color: blue;
-
-  }
-
-  .GetStarted {
-    width: 90%;
-    height: 35px;
-    margin: 0%;
-    font-size: 18px;
-    text-align: center;
-    display: inline;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    outline: none;
-  }
-
-  .GetStarted:hover {
-    border-color: aqua;
-  }
-
-  .two {
-    /* border: 2px solid blue; */
-    height: auto;
-    margin: 2%;
-    text-align: center;
-  }
-
-  .border1 {
-    width: 100%;
-    height: 30px;
-    background-color: rgb(0, 0, 0);
-    display: flex;
-    border-radius: 4px;
-  }
-
-  .Movies {
-    width: 100%;
-    padding: 50px 5.9%;
-    background-color: lightgrey;
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 3%;
-    row-gap: 20px;
-    /* justify-content: center; */
-  }
-
-  .movie {
-    width: 16%;
-    height: 260px;
-    /* background-color: red; */
-    overflow: hidden;
-    border-radius: 7px;
-    position: relative;
-
-  }
-
-  .movie img {
-    display: flex;
-    height: 300px;
-  }
-
-  .overlay {
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    position: absolute;
-    opacity: 0;
-    transition: .5s;
-    cursor: pointer;
-  }
-
-  .overlay:hover {
-    opacity: 1;
-  }
-
-  .video {
-    width: 100%;
-    height: 40%;
-    /* background-color: yellow; */
-  }
-
-  .details {
-    width: 100%;
-    height: 60%;
-    /* background-color: rgb(0, 47, 255); */
-    color: rgb(255, 255, 255);
-    font-size: 12px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 15px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-  }
-
-  .poster {
-    width: 100%;
-  }
-</style>
-
 <body>
-  <header class="header">
-
-    <div class="logo"> <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" alt="Netflix"></div>
-
-    <div class="search">
-      <input type="text" onkeyup="searchMovie()" id="search1" class="search-box" placeholder="Search movies">
-
-      <div class="searchbar">
-        <i onclick="searchMovie()" class='bx bx-search-alt-2'></i>
-      </div>
-    </div>
-  </header>
-
-
-  <div class="page">
-    <div class="one">
-      <h1>The biggest Indian hits. Ready to watch here from ₹ 149.</h1>
-
-
-      <h2>Join today. Cancel anytime.</h2>
-
-      <h3> Ready to watch? Enter your email to create or restart your membership.</h2>
-    </div>
-
-    <div class="two">
-      <div class="Email-id">
-        <input type="email" name="myEmail" placeholder="Email address">
-
-        <div class="GetStarted">
-          <input type="submit">
+    <div class="navbar">
+        <div class="navbar-left">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo" class="logo">
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">TV Shows</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">New & Popular</a></li>
+                <li><a href="#">My List</a></li>
+            </ul>
         </div>
-      </div>
+        <div class="navbar-right">
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Titles, people, genres">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+                <div class="search-results" id="search-results"></div>
+            </div>
+            <div class="profile">
+                <i class="fas fa-bell"></i>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" alt="Profile" class="profile-icon">
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="border1"></div>
 
-  <section class="Movies" id="Movies">
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Stranger Things</h1>
+            <p>When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.</p>
+            <div class="hero-buttons">
+                <button class="play-btn"><i class="fas fa-play"></i> Play</button>
+                <button class="info-btn"><i class="fas fa-info-circle"></i> More Info</button>
+            </div>
+        </div>
+    </div>
 
-    <img src="" alt="">
+    <div class="content">
+        <div class="movie-section">
+            <h2>Popular on Netflix</h2>
+            <div class="movie-row" id="popular">
+                <!-- Movies will be added by JavaScript -->
+            </div>
+        </div>
 
-  </section>
+        <div class="movie-section">
+            <h2>Trending Now</h2>
+            <div class="movie-row" id="trending">
+                <!-- Movies will be added by JavaScript -->
+            </div>
+        </div>
 
+        <div class="movie-section">
+            <h2>TV Dramas</h2>
+            <div class="movie-row" id="dramas">
+                <!-- Movies will be added by JavaScript -->
+            </div>
+        </div>
 
+        <div class="movie-section">
+            <h2>Action & Adventure</h2>
+            <div class="movie-row" id="action">
+                <!-- Movies will be added by JavaScript -->
+            </div>
+        </div>
 
-  <script>
-    let movies = [
-      {
-        Name: "RRR",
-        poster: "https://i.pinimg.com/564x/d0/16/31/d0163192f486c344981bdf60d38e3bd0.jpg",
-        Title: "RRR actually began as a prototype title when the movie was in development. Director S.S. Rajamouli has since revealed that the title director and the two main actors (via Bollywood Hungama)",
-        rating: 9.2,
-      },
-      {
-        Name: "MoonLight",
-        poster: "https://s.yimg.com/ny/api/res/1.2/ZzAHlDHi8a2xdBRRbruaYQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTkyOA--/https://media.zenfs.com/en/homerun/feed_manager_auto_publish_494/d05a3f087fa57f6d41b865d53a42a5f5",
-        Title: "Rhodes, André Holland, Janelle Monáe, Ashton Sanders, Jharrel Jerome, Naomie Harris, and Mahershala Ali. ",
-        rating: 7.2,
-      },
-      {
-        Name: "Lagaan",
-        poster: "https://upload.wikimedia.org/wikipedia/en/b/b6/Lagaan.jpg",
-        Title: "Once Upon a Time in India (transl. Land tax) is a 2001 Indian Hindi-language epic musical[5] sports drama film written and directed by Ashutosh Gowariker. ",
-        rating: 9.82,
-      },
-      {
-        Name: "Avanger",
-        poster: "https://wallpapercave.com/dwp1x/wp4770368.jpg",
-        Title: "Rhodes, André Holland, Janelle Monáe, Ashton Sanders, Jharrel Jerome, Naomie Harris, and Mahershala Ali.",
-        rating: 9.82,
-      },
-      {
-        Name: "Spiderman",
-        poster: "https://i.pinimg.com/236x/3a/23/f9/3a23f9bd994e0019c194655e1bc728f8.jpg",
-        Title: "Timely Comics, the precursor to Marvel Comics, was founded in 1939 by pulp magazine publisher Martin Goodman",
-        rating: 9.82,
-      },
-      {
-        Name: "Iron Man",
-        poster: "https://i.pinimg.com/236x/3f/cd/07/3fcd07bae3ee169ef648cef6633e7afd.jpg",
-        Title: "When Tony Stark, an industrialist, is captured, he constructs a high-tech armoured suit to escape. Once he manages to escape, he decides to use his suit to fight against evil forces to save the world.",
-        rating: 9.92,
-      },
-      {
-        Name: "Dark",
-        poster: "https://marketplace.canva.com/EAFVCFkAg3w/1/0/1131w/canva-red-and-black-horror-movie-poster-AOBSIAmLWOs.jpg",
-        Title: "Rhodes, André Holland, Janelle Monáe, Ashton Sanders, Jharrel Jerome, Naomie Harris, and Mahershala Ali.",
-        rating: 8.1,
-      },
-      {
-        Name: "ghayal",
-        poster: "https://static-koimoi.akamaized.net/wp-content/new-galleries/2015/11/ghayal-once-again-movie-poster-1.jpg",
-        Title: "Rhodes, André Holland, Janelle Monáe, Ashton Sanders, Jharrel Jerome, Naomie Harris, and Mahershala Ali.",
-        rating: 9.0,
-      },
-      {
-        Name: "Bhoot police",
-        poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzxsbBVRy2cML4NcnwsTPa6yQf5gWZxhc69sXai35urQDrXCDqOiqSVHD7QMCNA8YOfUI&usqp=CAU",
-        Title: "Rhodes, André Holland, Janelle Monáe, Ashton Sanders, Jharrel Jerome, Naomie Harris, and Mahershala Ali.",
-        rating: 7.2,
-      },
-      {
-        Name: "Brahmastra",
-        poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEwgqMGqvEV28E52xk1BFD_-a4aeFKt4IPBd1v1zM8ZN0WUGD_TTPjLqeXmdKSS8nrpOI&usqp=CAU",
-        Title: "Rhodes, André Holland, Janelle Monáe, Ashton Sanders, Jharrel Jerome, Naomie Harris, and Mahershala Ali.",
-        rating: 8.2,
-      },
-      {
-        Name: "mujhse shaadu karogi",
-        poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3kBgxrfOx9Mfpt70HvXZ62EZFOPtMnp46RW_kkR3fWttEnhxKMq3pUCxP3ElybFgQReo&usqp=CAU",
-        Title: "Rhodes, André Holland, Janelle Monáe, Ashton Sanders, Jharrel Jerome, Naomie Harris, and Mahershala Ali.",
-        rating: 6.6,
-      },
-      {
-        Name: "guzaarish",
-        poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS9PSJBaewbPuGifsWS7mF6mBJeQQXg46ZBHJ8BfS2gvAwAjOBfVoKxFK6u1RWPS4Ji18&usqp=CAU",
-        Title: "Renowned former magician Ethan, now a quadriplegic, files a petition for euthanasia. While he awaits the verdict, Omar, a young magic enthusiast, convinces Ethan to pass on his legacy to him.",
-        rating: 7.4,
-      },
-      {
-        Name: "Leo Movie (2023)",
-        poster: "https://i.pinimg.com/736x/28/2d/a0/282da074001c31106e08e54a44d1861e.jpg",
-        Title: "The movie revolves around the turn of events in the life of a young man (Thalapathy Vijay) who makes chocolates.",
-        rating: 8.8,
-      },
-      {
-        Name: "Mureder2",
-        poster: "https://m.media-amazon.com/images/M/MV5BODBiNTk1NjUtZDY3NC00YjUwLTgxNmItMjExZjcyNDdkZjQ1XkEyXkFqcGdeQXVyNjQ2MjQ5NzM@._V1_.jpg",
-        Title: "Rhodes, André Holland, Janelle Monáe, Ashton Sanders, Jharrel Jerome, Naomie Harris, and Mahershala Ali.",
-        rating: 8.2,
-      },
-      {
-        Name: "Pet Sematary (2019)",
-        poster: "https://i.pinimg.com/564x/d0/11/33/d0113352f4b921fc92d958e106daefe1.jpg",
-        Title: "Louis Creed, his wife Rachel, and their two children, Gage and Ellie, move to a rural home where they are welcomed and enlightened about the eerie 'Pet Sematary' located nearby.",
-        rating: 9.2,
-      },
-      {
-        Name: "Prey",
-        poster: "https://i.pinimg.com/736x/41/52/af/4152af2f6a0f87e907c181ad6b82ea03.jpg",
-        Title: "Louis Creed, his wife Rachel, and their two children, Gage and Ellie, move to a rural home where they are welcomed and enlightened about the eerie 'Pet Sematary' located nearby.",
-        rating: 7.2,
-      },
-      {
-        Name: "Tanu manu",
-        poster: "https://i.pinimg.com/236x/54/69/cb/5469cbe95a0c88209b079b6ce2e4017b.jpg",
-        Title: "Manu comes to India to find a bride and falls for Tanu at first sight, but free-spirited Tanu has no plan to marry him",
-        rating: 6.8,
-      },
-      {
-        Name: "Hate Story 2",
-        poster: "https://i.pinimg.com/236x/af/0f/66/af0f667b4470f7b402942f2b766dff0f.jpg",
-        Title: "Sonika, the mistress of political leader Mandar Mhatre, falls in love with her college friend Akshay. When Mandar kills Akshay, she devises a plan to take revenge on him.",
-        rating: 8.92,
-      },
-      {
-        Name: "Mastram",
-        poster: "https://im.rediff.com/movies/2016/feb/03outrageous-posters8.jpg",
-        Title: "Mastram is an 2020 Indian erotic drama streaming television series on MX Player. It stars Anshuman Jha, Tara Alisha Berry. Tara Alisha Berry was also in the 2014 Hindi biopic of the same name. Season 1 released on 30 April 2020. ",
-        rating: 7.2,
-      }
-    ]
+        <div class="movie-section">
+            <h2>Comedies</h2>
+            <div class="movie-row" id="comedy">
+                <!-- Movies will be added by JavaScript -->
+            </div>
+        </div>
+    </div>
 
+    <footer>
+        <div class="footer-content">
+            <div class="social-icons">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+            <div class="footer-links">
+                <a href="#">Audio Description</a>
+                <a href="#">Help Center</a>
+                <a href="#">Gift Cards</a>
+                <a href="#">Media Center</a>
+                <a href="#">Investor Relations</a>
+                <a href="#">Jobs</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Privacy</a>
+                <a href="#">Legal Notices</a>
+                <a href="#">Cookie Preferences</a>
+                <a href="#">Corporate Information</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <button class="service-btn">Service Code</button>
+            <p class="copyright">© 2023 Netflix Clone, Inc.</p>
+        </div>
+    </footer>
 
-
-
-    function searchMovie() {
-      let movieName = document.getElementById('search1').value;
-
-      if (movieName !== "") {
-        let resutlt = movies.filter(function (movie) {
-          return movie.Name.toUpperCase().includes(movieName.toUpperCase());
-        })
-        displayMovie(resutlt);
-      }
-
-      else {
-        displayMovie(movies);
-      }
-    }
-    function displayMovie(data) {
-
-      document.getElementById("Movies").innerHTML = "";
-
-      let htmlString = ``;
-
-      for (let i = 0; i < data.length; i++) {
-        htmlString = htmlString +
-          ` <div class="movie">
-  <div class="overlay">
- <div class="video"></div>
- <div class="details">
-   <h1>${data[i].Name}</h1>
-   <h3>IMDB:${data[i].rating}</h3>
-   <p>${data[i].Title}</p>
- </div>
-
-</div>
-
-<img class="poster"
- src=${data[i].poster} alt="error to load"> 
-</div>
-`
-        document.getElementById("Movies").innerHTML = htmlString;
-      }
-      console.log(htmlString);
-    }
-    displayMovie(movies);
-  </script>
+    <script src="script.js"></script>
 </body>
-
 </html>
