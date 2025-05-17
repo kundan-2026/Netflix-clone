@@ -1,162 +1,179 @@
-let movies = [
-  {
-    Name: "RRR",
-    poster: "https://i.pinimg.com/564x/d0/16/31/d0163192f486c344981bdf60d38e3bd0.jpg",
-    Title: "RRR actually began as a prototype title when the movie was in development. Director S.S. Rajamouli has since revealed that the title director and the two main actors (via Bollywood Hungama)",
-    rating: 9.2,
-  },
-  {
-    Name: "MoonLight",
-    poster: "https://s.yimg.com/ny/api/res/1.2/ZzAHlDHi8a2xdBRRbruaYQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTkyOA--/https://media.zenfs.com/en/homerun/feed_manager_auto_publish_494/d05a3f087fa57f6d41b865d53a42a5f5",
-    Title: "Rhodes, André Holland, Janelle Monáe, Ashton Sanders, Jharrel Jerome, Naomie Harris, and Mahershala Ali. ",
-    rating: 7.2,
-  },
-  {
-    Name: "Lagaan",
-    poster: "https://upload.wikimedia.org/wikipedia/en/b/b6/Lagaan.jpg",
-    Title: "Once Upon a Time in India (transl. Land tax) is a 2001 Indian Hindi-language epic musical[5] sports drama film written and directed by Ashutosh Gowariker. ",
-    rating: 9.82,
-  },
-  {
-    Name: "Avanger",
-    poster: "https://wallpapercave.com/dwp1x/wp4770368.jpg",
-    Title: "Rhodes, André Holland, Janelle Monáe, Ashton Sanders, Jharrel Jerome, Naomie Harris, and Mahershala Ali.",
-    rating: 9.82,
-  },
-  {
-    Name: "Spiderman",
-    poster: "https://i.pinimg.com/236x/3a/23/f9/3a23f9bd994e0019c194655e1bc728f8.jpg",
-    Title: "Timely Comics, the precursor to Marvel Comics, was founded in 1939 by pulp magazine publisher Martin Goodman",
-    rating: 9.82,
-  },
-  {
-    Name: "Iron Man",
-    poster: "https://i.pinimg.com/236x/3f/cd/07/3fcd07bae3ee169ef648cef6633e7afd.jpg",
-    Title: "When Tony Stark, an industrialist, is captured, he constructs a high-tech armoured suit to escape. Once he manages to escape, he decides to use his suit to fight against evil forces to save the world.",
-    rating: 9.92,
-  },
-  {
-    Name: "Dark",
-    poster: "https://marketplace.canva.com/EAFVCFkAg3w/1/0/1131w/canva-red-and-black-horror-movie-poster-AOBSIAmLWOs.jpg",
-    Title: "Rhodes, André Holland, Janelle Monáe, Ashton Sanders, Jharrel Jerome, Naomie Harris, and Mahershala Ali.",
-    rating: 8.1,
-  },
-  {
-    Name: "ghayal",
-    poster: "https://static-koimoi.akamaized.net/wp-content/new-galleries/2015/11/ghayal-once-again-movie-poster-1.jpg",
-    Title: "Rhodes, André Holland, Janelle Monáe, Ashton Sanders, Jharrel Jerome, Naomie Harris, and Mahershala Ali.",
-    rating: 9.0,
-  },
-  {
-    Name: "Bhoot police",
-    poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzxsbBVRy2cML4NcnwsTPa6yQf5gWZxhc69sXai35urQDrXCDqOiqSVHD7QMCNA8YOfUI&usqp=CAU",
-    Title: "Rhodes, André Holland, Janelle Monáe, Ashton Sanders, Jharrel Jerome, Naomie Harris, and Mahershala Ali.",
-    rating: 7.2,
-  },
-  {
-    Name: "Brahmastra",
-    poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEwgqMGqvEV28E52xk1BFD_-a4aeFKt4IPBd1v1zM8ZN0WUGD_TTPjLqeXmdKSS8nrpOI&usqp=CAU",
-    Title: "Rhodes, André Holland, Janelle Monáe, Ashton Sanders, Jharrel Jerome, Naomie Harris, and Mahershala Ali.",
-    rating: 8.2,
-  },
-  {
-    Name: "mujhse shaadu karogi",
-    poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3kBgxrfOx9Mfpt70HvXZ62EZFOPtMnp46RW_kkR3fWttEnhxKMq3pUCxP3ElybFgQReo&usqp=CAU",
-    Title: "Rhodes, André Holland, Janelle Monáe, Ashton Sanders, Jharrel Jerome, Naomie Harris, and Mahershala Ali.",
-    rating: 6.6,
-  },
-  {
-    Name: "guzaarish",
-    poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS9PSJBaewbPuGifsWS7mF6mBJeQQXg46ZBHJ8BfS2gvAwAjOBfVoKxFK6u1RWPS4Ji18&usqp=CAU",
-    Title: "Renowned former magician Ethan, now a quadriplegic, files a petition for euthanasia. While he awaits the verdict, Omar, a young magic enthusiast, convinces Ethan to pass on his legacy to him.",
-    rating: 7.4,
-  },
-  {
-    Name: "Leo Movie (2023)",
-    poster: "https://i.pinimg.com/736x/28/2d/a0/282da074001c31106e08e54a44d1861e.jpg",
-    Title: "The movie revolves around the turn of events in the life of a young man (Thalapathy Vijay) who makes chocolates.",
-    rating: 8.8,
-  },
-  {
-    Name: "Mureder2",
-    poster: "https://m.media-amazon.com/images/M/MV5BODBiNTk1NjUtZDY3NC00YjUwLTgxNmItMjExZjcyNDdkZjQ1XkEyXkFqcGdeQXVyNjQ2MjQ5NzM@._V1_.jpg",
-    Title: "Rhodes, André Holland, Janelle Monáe, Ashton Sanders, Jharrel Jerome, Naomie Harris, and Mahershala Ali.",
-    rating: 8.2,
-  },
-  {
-    Name: "Pet Sematary (2019)",
-    poster: "https://i.pinimg.com/564x/d0/11/33/d0113352f4b921fc92d958e106daefe1.jpg",
-    Title: "Louis Creed, his wife Rachel, and their two children, Gage and Ellie, move to a rural home where they are welcomed and enlightened about the eerie 'Pet Sematary' located nearby.",
-    rating: 9.2,
-  },
-  {
-    Name: "Prey",
-    poster: "https://i.pinimg.com/736x/41/52/af/4152af2f6a0f87e907c181ad6b82ea03.jpg",
-    Title: "Louis Creed, his wife Rachel, and their two children, Gage and Ellie, move to a rural home where they are welcomed and enlightened about the eerie 'Pet Sematary' located nearby.",
-    rating: 7.2,
-  },
-  {
-    Name: "Tanu manu",
-    poster: "https://i.pinimg.com/236x/54/69/cb/5469cbe95a0c88209b079b6ce2e4017b.jpg",
-    Title: "Manu comes to India to find a bride and falls for Tanu at first sight, but free-spirited Tanu has no plan to marry him",
-    rating: 6.8,
-  },
-  {
-    Name: "Hate Story 2",
-    poster: "https://i.pinimg.com/236x/af/0f/66/af0f667b4470f7b402942f2b766dff0f.jpg",
-    Title: "Sonika, the mistress of political leader Mandar Mhatre, falls in love with her college friend Akshay. When Mandar kills Akshay, she devises a plan to take revenge on him.",
-    rating: 8.92,
-  },
-  {
-    Name: "Mastram",
-    poster: "https://im.rediff.com/movies/2016/feb/03outrageous-posters8.jpg",
-    Title: "Mastram is an 2020 Indian erotic drama streaming television series on MX Player. It stars Anshuman Jha, Tara Alisha Berry. Tara Alisha Berry was also in the 2014 Hindi biopic of the same name. Season 1 released on 30 April 2020. ",
-    rating: 7.2,
-  }
-]
+document.addEventListener('DOMContentLoaded', function() {
+    // Sample movie data
+    const movies = {
+        popular: [
+            { id: 1, title: "Stranger Things", genre: "Sci-Fi & Horror", year: 2016, image: "https://image.tmdb.org/t/p/w500/49WJfeN0moxb9IPfGn8AIqMGskD.jpg" },
+            { id: 2, title: "The Witcher", genre: "Fantasy", year: 2019, image: "https://image.tmdb.org/t/p/w500/7vjaCdMw15FEbXyLQTVa04URsPm.jpg" },
+            { id: 3, title: "Money Heist", genre: "Crime Drama", year: 2017, image: "https://image.tmdb.org/t/p/w500/reEMJA1uzscCbkpeRJeTT2bjqUp.jpg" },
+            { id: 4, title: "The Queen's Gambit", genre: "Drama", year: 2020, image: "https://image.tmdb.org/t/p/w500/zU0htwkhNvBQdVSIKB9s6hgVeFK.jpg" },
+            { id: 5, title: "Bridgerton", genre: "Romance", year: 2020, image: "https://image.tmdb.org/t/p/w500/k8uH9szY3Dq1YvjJfMDhK7SxYwN.jpg" },
+            { id: 6, title: "Dark", genre: "Sci-Fi & Thriller", year: 2017, image: "https://image.tmdb.org/t/p/w500/5Lo4H5GHkaf8q5WgTtz8vGZ5q6j.jpg" }
+        ],
+        trending: [
+            { id: 7, title: "Squid Game", genre: "Thriller", year: 2021, image: "https://image.tmdb.org/t/p/w500/dDlEmu3EZ0Pgg93K2SVNLCjCSvE.jpg" },
+            { id: 8, title: "The Crown", genre: "Historical Drama", year: 2016, image: "https://image.tmdb.org/t/p/w500/jJvHjJ7EP9SNcZQNePe9QlLkXwX.jpg" },
+            { id: 9, title: "Ozark", genre: "Crime Drama", year: 2017, image: "https://image.tmdb.org/t/p/w500/pCGyohvXm1U0hYySz5hQQiMkGjX.jpg" },
+            { id: 10, title: "Peaky Blinders", genre: "Crime Drama", year: 2013, image: "https://image.tmdb.org/t/p/w500/6PX0r5TRRU5y0jZ70y1OtbLYmoD.jpg" },
+            { id: 11, title: "The Mandalorian", genre: "Sci-Fi & Adventure", year: 2019, image: "https://image.tmdb.org/t/p/w500/sWgBv7LV2PRoQgkxwlibdGXKz1S.jpg" },
+            { id: 12, title: "Lupin", genre: "Crime Drama", year: 2021, image: "https://image.tmdb.org/t/p/w500/6j7Qb6VHV5BiNdC3FQcXxXD6P6L.jpg" }
+        ],
+        dramas: [
+            { id: 13, title: "Breaking Bad", genre: "Crime Drama", year: 2008, image: "https://image.tmdb.org/t/p/w500/ggFHVNu6YYI5L9pCfOacjizRGt.jpg" },
+            { id: 14, title: "Better Call Saul", genre: "Crime Drama", year: 2015, image: "https://image.tmdb.org/t/p/w500/fC2HDm5t0kHl7mTm7jxMR31b7by.jpg" },
+            { id: 15, title: "The Last Dance", genre: "Documentary", year: 2020, image: "https://image.tmdb.org/t/p/w500/3L5nSCLmZQJm09QUe6QEWQ5QyV2.jpg" },
+            { id: 16, title: "Narcos", genre: "Crime Drama", year: 2015, image: "https://image.tmdb.org/t/p/w500/7bmGz5hW0GqWn4MfZk9P5HZ6t9w.jpg" },
+            { id: 17, title: "House of Cards", genre: "Political Drama", year: 2013, image: "https://image.tmdb.org/t/p/w500/hKWyW0bBxQAvYcnjZzQ3QmY0J9u.jpg" },
+            { id: 18, title: "Mindhunter", genre: "Crime Drama", year: 2017, image: "https://image.tmdb.org/t/p/w500/6HMS6JvHxM6xyX9F8Y7F0Vj3q3y.jpg" }
+        ],
+        action: [
+            { id: 19, title: "Extraction", genre: "Action", year: 2020, image: "https://image.tmdb.org/t/p/w500/wlfDxbGEsW58vGhFljKkcR5IxDj.jpg" },
+            { id: 20, title: "6 Underground", genre: "Action", year: 2019, image: "https://image.tmdb.org/t/p/w500/lnWkyG3LLgbbrIEeyl5mK5VRFe4.jpg" },
+            { id: 21, title: "The Old Guard", genre: "Action & Fantasy", year: 2020, image: "https://image.tmdb.org/t/p/w500/cjr4NWURcVN3gW5FlHeabgBHLrY.jpg" },
+            { id: 22, title: "Project Power", genre: "Action & Sci-Fi", year: 2020, image: "https://image.tmdb.org/t/p/w500/TnOeov4w0sTtV2gqICqIxVi74V.jpg" },
+            { id: 23, title: "Army of the Dead", genre: "Action & Horror", year: 2021, image: "https://image.tmdb.org/t/p/w500/z8CExJekGrEThbpMXAmCFvvgoJR.jpg" },
+            { id: 24, title: "Red Notice", genre: "Action & Comedy", year: 2021, image: "https://image.tmdb.org/t/p/w500/wdE6ewaKZHr62bLqCn7A2DiGShm.jpg" }
+        ],
+        comedy: [
+            { id: 25, title: "The Office", genre: "Comedy", year: 2005, image: "https://image.tmdb.org/t/p/w500/qWnJzyZhyy74gjpSjIXWmuk0ifX.jpg" },
+            { id: 26, title: "Friends", genre: "Comedy", year: 1994, image: "https://image.tmdb.org/t/p/w500/7buCWBTpiPrCF5Lt023dSC60rg.jpg" },
+            { id: 27, title: "Brooklyn Nine-Nine", genre: "Comedy", year: 2013, image: "https://image.tmdb.org/t/p/w500/hgRMSOt7a1b8qyQR68vUixJPang.jpg" },
+            { id: 28, title: "The Good Place", genre: "Comedy", year: 2016, image: "https://image.tmdb.org/t/p/w500/eFV1OS5fw1T4J9nKdw2ytE9UQ3P.jpg" },
+            { id: 29, title: "Parks and Recreation", genre: "Comedy", year: 2009, image: "https://image.tmdb.org/t/p/w500/dFs6yHxheEGoZSoZ1Swv0xQk4Qm.jpg" },
+            { id: 30, title: "The Big Bang Theory", genre: "Comedy", year: 2007, image: "https://image.tmdb.org/t/p/w500/ooBGRQBdbGzBxAVfExiO8r7kloA.jpg" }
+        ]
+    };
 
+    // All movies array for search functionality
+    const allMovies = [...movies.popular, ...movies.trending, ...movies.dramas, ...movies.action, ...movies.comedy];
 
+    // Populate movie sections
+    function populateMovieSection(sectionId, movieArray) {
+        const section = document.getElementById(sectionId);
+        section.innerHTML = '';
+        
+        movieArray.forEach(movie => {
+            const movieItem = document.createElement('div');
+            movieItem.className = 'movie-item';
+            movieItem.innerHTML = `
+                <img src="${movie.image}" alt="${movie.title}">
+                <div class="movie-info">
+                    <h3>${movie.title}</h3>
+                    <p>${movie.genre} • ${movie.year}</p>
+                </div>
+            `;
+            section.appendChild(movieItem);
+        });
+    }
 
+    // Initialize movie sections
+    populateMovieSection('popular', movies.popular);
+    populateMovieSection('trending', movies.trending);
+    populateMovieSection('dramas', movies.dramas);
+    populateMovieSection('action', movies.action);
+    populateMovieSection('comedy', movies.comedy);
 
-function searchMovie() {
-  let movieName = document.getElementById('search1').value;
+    // Search functionality
+    const searchInput = document.getElementById('search-input');
+    const searchBtn = document.getElementById('search-btn');
+    const searchResults = document.getElementById('search-results');
 
-  if (movieName !== "") {
-    let resutlt = movies.filter(function (movie) {
-      return movie.Name.toUpperCase().includes(movieName.toUpperCase());
-    })
-    displayMovie(resutlt);
-  }
+    function performSearch(query) {
+        if (query.trim() === '') {
+            searchResults.style.display = 'none';
+            return;
+        }
+        
+        const results = allMovies.filter(movie => 
+            movie.title.toLowerCase().includes(query.toLowerCase()) || 
+            movie.genre.toLowerCase().includes(query.toLowerCase())
+        );
+        
+        displaySearchResults(results);
+    }
 
-  else {
-    displayMovie(movies);
-  }
-}
-function displayMovie(data) {
+    function displaySearchResults(results) {
+        searchResults.innerHTML = '';
+        
+        if (results.length === 0) {
+            searchResults.innerHTML = '<div class="search-result-item">No results found</div>';
+        } else {
+            results.forEach(movie => {
+                const resultItem = document.createElement('div');
+                resultItem.className = 'search-result-item';
+                resultItem.innerHTML = `
+                    <img src="${movie.image}" alt="${movie.title}" style="width: 50px; height: 50px; object-fit: cover; margin-right: 10px; display: inline-block; vertical-align: middle;">
+                    <div style="display: inline-block; vertical-align: middle;">
+                        <h4 style="margin: 0; font-size: 14px;">${movie.title}</h4>
+                        <p style="margin: 0; font-size: 12px; color: #b3b3b3;">${movie.genre} • ${movie.year}</p>
+                    </div>
+                `;
+                searchResults.appendChild(resultItem);
+            });
+        }
+        
+        searchResults.style.display = 'block';
+    }
 
-  document.getElementById("Movies").innerHTML = "";
+    searchBtn.addEventListener('click', () => {
+        performSearch(searchInput.value);
+    });
 
-  let htmlString = ``;
+    searchInput.addEventListener('input', () => {
+        performSearch(searchInput.value);
+    });
 
-  for (let i = 0; i < data.length; i++) {
-    htmlString = htmlString +
-      ` <div class="movie">
-<div class="overlay">
-<div class="video"></div>
-<div class="details">
-<h1>${data[i].Name}</h1>
-<h3>IMDB:${data[i].rating}</h3>
-<p>${data[i].Title}</p>
-</div>
+    searchInput.addEventListener('focus', () => {
+        if (searchInput.value.trim() !== '') {
+            searchResults.style.display = 'block';
+        }
+    });
 
-</div>
+    document.addEventListener('click', (e) => {
+        if (!searchInput.contains(e.target) && !searchResults.contains(e.target) && !searchBtn.contains(e.target)) {
+            searchResults.style.display = 'none';
+        }
+    });
 
-<img class="poster"
-src=${data[i].poster} alt="error to load"> 
-</div>
-`
-    document.getElementById("Movies").innerHTML = htmlString;
-  }
-  console.log(htmlString);
-}
-displayMovie(movies);
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            document.querySelector('.navbar').classList.add('scrolled');
+        } else {
+            document.querySelector('.navbar').classList.remove('scrolled');
+        }
+    });
+
+    // Movie hover effect
+    document.addEventListener('mouseover', (e) => {
+        if (e.target.classList.contains('movie-item') || e.target.closest('.movie-item')) {
+            const movieItem = e.target.classList.contains('movie-item') ? e.target : e.target.closest('.movie-item');
+            const movieRow = movieItem.parentElement;
+            
+            // Get all siblings
+            const siblings = Array.from(movieRow.children).filter(child => child !== movieItem);
+            
+            // Move siblings away from the hovered item
+            const index = Array.from(movieRow.children).indexOf(movieItem);
+            
+            siblings.forEach((sibling, i) => {
+                if (i < index) {
+                    sibling.style.transform = 'translateX(-10%)';
+                } else if (i > index) {
+                    sibling.style.transform = 'translateX(10%)';
+                }
+            });
+        }
+    });
+
+    document.addEventListener('mouseout', (e) => {
+        if (e.target.classList.contains('movie-item') || e.target.closest('.movie-item')) {
+            const movieItem = e.target.classList.contains('movie-item') ? e.target : e.target.closest('.movie-item');
+            const movieRow = movieItem.parentElement;
+            
+            // Reset all siblings
+            Array.from(movieRow.children).forEach(sibling => {
+                sibling.style.transform = '';
+            });
+        }
+    });
+});
