@@ -4,7 +4,7 @@ A simple Netflix clone built using **only one HTML file** with embedded CSS and 
 
 ## 🔗 Live Demo
 
-👉 [View Demo](https://delicate-tiramisu-7968ab.netlify.app/)
+👉 [View Demo](https://chillbox.netlify.app/)
 
 ---
 
