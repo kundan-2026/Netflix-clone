@@ -46,7 +46,7 @@ A simple Netflix clone built using **only one HTML file** with embedded CSS and 
 
 ## 🖼 Screenshot
 
-![Netflix Clone Screenshot](screenshot.png)
+![Netflix Clone Screenshot](image.png)
 
 
 ---
